@@ -1,14 +1,15 @@
 "use client";
 
-import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CloudImage from "@/components/CloudImage";
 import { MapPin, Calendar, ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import Counter from "@/components/Counter";
+import { getHeroPosterUrl, getHeroVideoUrl } from "@/lib/cloudinary";
 
 const categories = ["All", ...Array.from(new Set(projects.map(p => p.category)))];
 
@@ -18,6 +19,10 @@ export default function ProjectsClient() {
     const filteredProjects = activeCategory === "All"
         ? projects
         : projects.filter(p => p.category === activeCategory);
+
+    const heroPoster = getHeroPosterUrl() || "/office_complex_lusaka.png";
+    const heroVideo = getHeroVideoUrl();
+    const ctaBg = getHeroPosterUrl() || "/office_complex_lusaka.png";
 
     return (
         <main className="min-h-screen bg-white">
@@ -29,17 +34,19 @@ export default function ProjectsClient() {
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-blue-900 opacity-90 z-10"></div>
-                    <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        poster={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up`}
-                        className="w-full h-full object-cover"
-                    >
-                        <source src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/hero-video_so4stg`} type="video/mp4" />
-                    </video>
+                    {heroVideo ? (
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            poster={heroPoster}
+                            className="w-full h-full object-cover"
+                        >
+                            <source src={heroVideo} type="video/mp4" />
+                        </video>
+                    ) : null}
                 </div>
 
                 {/* Decorative Elements */}
@@ -116,7 +123,7 @@ export default function ProjectsClient() {
                                 >
                                     {/* Image Container */}
                                     <div className="relative h-72 w-full overflow-hidden shrink-0">
-                                        <CldImage
+                                        <CloudImage
                                             src={project.image}
                                             alt={project.title}
                                             fill
@@ -186,7 +193,7 @@ export default function ProjectsClient() {
 
             {/* CTA Section */}
             <section className="py-20 bg-primary relative overflow-hidden">
-                <div className="absolute inset-0 opacity-5 bg-cover bg-center" style={{ backgroundImage: `url(https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up)` }}></div>
+                <div className="absolute inset-0 opacity-5 bg-cover bg-center" style={{ backgroundImage: `url(${ctaBg})` }}></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
 
                 <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

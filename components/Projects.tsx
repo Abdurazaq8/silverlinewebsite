@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { CldImage } from "next-cloudinary";
 import { projects } from "@/lib/projects";
+import CloudImage from "./CloudImage";
 import { Reveal } from "./Reveal";
 
 export default function Projects() {
@@ -27,7 +27,7 @@ export default function Projects() {
                             <Reveal key={project.id} delay={index * 0.1} width="100%">
                                 <div className="group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100 flex flex-col h-full">
                                     <div className="relative h-40 w-full overflow-hidden shrink-0">
-                                        <CldImage
+                                        <CloudImage
                                             src={project.image}
                                             alt={project.title}
                                             fill

@@ -2,6 +2,7 @@
 
 import { Home, Building2, Hammer, Warehouse, BrickWall, Truck, Zap, Factory, Fuel, Sun } from "lucide-react";
 import Image from "next/image";
+import CloudImage from "./CloudImage";
 import { Reveal } from "./Reveal";
 import { useRef, useEffect, useState } from "react";
 
@@ -58,7 +59,7 @@ const services = [
         icon: Truck,
         title: "Logistics & Transportation",
         description: "Specialized transport solutions including abnormal load haulage and cross-border logistics for heavy industrial goods.",
-        image: "/PHOTO%202/WhatsApp%20Image%202026-01-29%20at%209.46.55%20AM.jpeg",
+        image: "Transportation_and_Logistics_picture.jpg_ukgzag",
     },
     {
         icon: Home,
@@ -71,57 +72,61 @@ const services = [
         icon: Hammer,
         title: "Mining Support Services",
         description: "Comprehensive mining infrastructure support, including heavy equipment supply and tailored civil works.",
-        image: "/services/mining_support.jpg",
+        image: "Mining_Support_.jpg_kb0dql",
     },
     {
         icon: Building2,
         title: "Building Construction",
         description: "We construct residential, commercial, and industrial buildings using durable materials and modern engineering standards.",
-        image: "/PHOTOS%201/PHOTOS/IMG_1259.jpg",
+        image: "Building_Construction.jpg_addw5o",
     },
     {
         icon: Warehouse,
         title: "Portal-Framed Structures Fabrication & Erection",
         description: "Design, fabrication, and erection of steel structures suitable for warehouses, factories, and industrial facilities.",
-        image: "/PHOTOS%201/PHOTOS/IMG_1338.jpg",
+        image: "Portal_framed_structures.jpg_xhobxw",
     },
     {
         icon: BrickWall,
         title: "Concrete Works",
         description: "Execution of reinforced concrete foundations, slabs, beams, columns, and structural elements.",
-        image: "/PHOTOS%201/PHOTOS/IMG_1272.jpg",
+        image: "Concrete_Works.jpg_jorgaa",
     },
     {
         icon: Truck,
         title: "All-Weather Roads Construction",
         description: "Construction of durable gravel and paved access roads suitable for farms, industries, and rural infrastructure.",
-        image: "/PHOTOS%201/PHOTOS/DJI_0194.jpg",
+        image: "All_weather_road_construction.jpg_quklgz",
     },
     {
         icon: Zap,
         title: "Off-Grid Power Construction",
         description: "Development of off-grid power systems and related infrastructure for remote sites and industrial operations.",
-        image: "/PHOTOS%201/PHOTOS/DJI_0170.jpg",
+        image: "Off-Grid_Power_Construction.jpg_xpt8ep",
     },
     {
         icon: Factory,
         title: "Substations Construction",
         description: "Civil and mechanical works for electrical substations, including foundations, plinths, cable trenches, and support structures.",
-        image: "/PHOTOS%201/PHOTOS/DJI_0160.jpg",
+        image: "Substation-construction.jpg_nylhcd",
     },
     {
         icon: Fuel,
         title: "Filling Stations Mechanical Works",
         description: "Installation and maintenance of fuel station mechanical systems including tanks, piping, and dispensing lines.",
-        image: "/PHOTOS%201/PHOTOS/IMG_8002.jpg",
+        image: "Filling_Stations_Mechanical_Works.jpg_aulk4u",
     },
     {
         icon: Sun,
         title: "Solar Works",
         description: "Installation of solar power systems, including solar panels, inverters, battery storage, and support structures.",
-        image: "/PHOTOS%201/PHOTOS/DJI_0240.jpg",
+        image: "solar_works.jpg_lb3pwz",
     },
 ];
+
+function isLocalImage(src: string) {
+    return src.startsWith("/");
+}
 
 export default function Services() {
     return (
@@ -147,7 +152,7 @@ export default function Services() {
                                     <div className="relative h-48 w-full overflow-hidden bg-gray-100">
                                         {service.video ? (
                                             <LazyServiceVideo videoSrc={service.video} poster={service.image} />
-                                        ) : (
+                                        ) : isLocalImage(service.image) ? (
                                             <Image
                                                 src={service.image}
                                                 alt={service.title}
@@ -155,6 +160,15 @@ export default function Services() {
                                                 loading="lazy"
                                                 placeholder="blur"
                                                 blurDataURL={BLUR_DATA_URL}
+                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                                            />
+                                        ) : (
+                                            <CloudImage
+                                                src={service.image}
+                                                alt={service.title}
+                                                fill
+                                                loading="lazy"
                                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                                             />

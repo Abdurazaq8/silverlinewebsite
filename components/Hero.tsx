@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
+import { getHeroPosterUrl, getHeroVideoUrl } from "@/lib/cloudinary";
 
 const lineVariants = {
     hidden: { y: 100, opacity: 0 },
@@ -15,23 +15,34 @@ const lineVariants = {
 };
 
 export default function Hero() {
+    const heroPoster = getHeroPosterUrl() || "/office_complex_lusaka.png";
+    const heroVideo = getHeroVideoUrl();
+
     return (
         <section id="hero" className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center pt-32">
             {/* Video Background */}
             <div className="absolute inset-0 w-full h-full z-0">
                 <div className="absolute inset-0 bg-black/60 z-10"></div>
-                <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/construction_hero_modern_site_ljm6up`}
-                    className="w-full h-full object-cover"
-                >
-                    <source src={`https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/video/upload/hero-video_so4stg`} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                {heroVideo ? (
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        poster={heroPoster}
+                        className="w-full h-full object-cover"
+                    >
+                        <source src={heroVideo} type="video/mp4" />
+                    </video>
+                ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                        src={heroPoster}
+                        alt=""
+                        className="w-full h-full object-cover"
+                    />
+                )}
             </div>
 
             <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center">
@@ -118,30 +129,16 @@ export default function Hero() {
                             <Link href="/#testimonials" className="cursor-pointer group block">
                                 <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center gap-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                                     <div className="flex -space-x-2">
-                                        <Image
-                                            src="https://api.dicebear.com/7.x/avataaars/png?seed=client1&size=80"
-                                            alt="Client testimonial"
-                                            width={40}
-                                            height={40}
-                                            sizes="80px"
-                                            className="w-10 h-10 rounded-full border-2 border-white/20 object-cover"
-                                        />
-                                        <Image
-                                            src="https://api.dicebear.com/7.x/avataaars/png?seed=client2&size=80"
-                                            alt="Client testimonial"
-                                            width={40}
-                                            height={40}
-                                            sizes="80px"
-                                            className="w-10 h-10 rounded-full border-2 border-white/20 object-cover"
-                                        />
-                                        <Image
-                                            src="https://api.dicebear.com/7.x/avataaars/png?seed=client3&size=80"
-                                            alt="Client testimonial"
-                                            width={40}
-                                            height={40}
-                                            sizes="80px"
-                                            className="w-10 h-10 rounded-full border-2 border-white/20 object-cover"
-                                        />
+                                        {["J", "S", "M"].map((initial, i) => (
+                                            <div
+                                                key={initial}
+                                                className="w-10 h-10 rounded-full border-2 border-white/20 bg-secondary/80 text-white text-sm font-bold flex items-center justify-center"
+                                                style={{ zIndex: 3 - i }}
+                                                aria-hidden
+                                            >
+                                                {initial}
+                                            </div>
+                                        ))}
                                     </div>
                                     <div className="text-left">
                                         <div className="flex items-center gap-1">
