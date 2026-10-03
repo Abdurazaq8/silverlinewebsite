@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Instagram, Linkedin, Facebook, Twitter } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 import { Reveal } from "./Reveal";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Contact() {
     const [inquiryType, setInquiryType] = useState("General");
@@ -13,10 +14,24 @@ export default function Contact() {
 
     // Social media links with icons
     const socialLinks = [
-        { icon: Instagram, href: "#", color: "hover:text-pink-600" },
-        { icon: Linkedin, href: "#", color: "hover:text-blue-700" },
-        { icon: Facebook, href: "#", color: "hover:text-blue-600" },
-        { icon: Twitter, href: "#", color: "hover:text-blue-400" }, // Using Twitter as placeholder for TikTok/X if needed
+        {
+            name: "WhatsApp",
+            icon: WhatsAppIcon,
+            href: "https://wa.me/260966626579",
+            color: "hover:text-emerald-600 hover:bg-emerald-50",
+        },
+        {
+            name: "Facebook",
+            icon: Facebook,
+            href: "https://www.facebook.com/share/1KntzJukRd/?mibextid=wwXIfr",
+            color: "hover:text-blue-600 hover:bg-blue-50",
+        },
+        {
+            name: "Instagram",
+            icon: Instagram,
+            href: "https://www.instagram.com/silverline.eng_limited?stkn=aGtib2tuc2hvNW5w",
+            color: "hover:text-pink-600 hover:bg-pink-50",
+        },
     ];
 
     return (
@@ -99,11 +114,28 @@ export default function Contact() {
                                 <div className="space-y-1">
                                     <h3 className="text-gray-900 font-bold text-sm flex items-center gap-2">
                                         <span className="w-1.5 h-1.5 bg-secondary rounded-full"></span>
-                                        Phone
+                                        Phone & WhatsApp
                                     </h3>
-                                    <p className="text-gray-500 text-xs pl-3.5">
-                                        +260 966 626579 / +260 771 814040
-                                    </p>
+                                    <div className="pl-3.5 space-y-1.5 pt-0.5">
+                                        <a
+                                            href="https://wa.me/260966626579"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors text-xs font-medium group"
+                                        >
+                                            <WhatsAppIcon size={14} className="text-emerald-600 group-hover:scale-110 transition-transform flex-shrink-0" />
+                                            <span>+260 966 626579</span>
+                                        </a>
+                                        <a
+                                            href="https://wa.me/260771814040"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-2 text-gray-700 hover:text-emerald-600 transition-colors text-xs font-medium group"
+                                        >
+                                            <WhatsAppIcon size={14} className="text-emerald-600 group-hover:scale-110 transition-transform flex-shrink-0" />
+                                            <span>+260 771 814040</span>
+                                        </a>
+                                    </div>
                                 </div>
 
                                 {/* Social Media */}
@@ -113,10 +145,13 @@ export default function Contact() {
                                         Social Media
                                     </h3>
                                     <div className="flex gap-3 pl-3.5">
-                                        {socialLinks.map((social, index) => (
+                                        {socialLinks.map((social) => (
                                             <a
-                                                key={index}
+                                                key={social.name}
                                                 href={social.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={social.name}
                                                 className={`text-gray-400 transition-colors bg-gray-50 p-2 rounded-full hover:bg-gray-100 ${social.color}`}
                                             >
                                                 <social.icon size={18} />
@@ -135,10 +170,52 @@ export default function Contact() {
                                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                                     Tell Us What You Need
                                 </h3>
-                                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                                <p className="text-sm text-gray-600">
                                     Ready to start your project? Let&apos;s discuss how we can help bring your vision to life.
                                 </p>
                             </Reveal>
+                        </div>
+
+                        {/* Direct WhatsApp Quick Chat Bar */}
+                        <Reveal delay={0.1} width="100%">
+                            <div className="mb-6 p-5 sm:p-6 rounded-2xl bg-white border border-gray-200/90 shadow-sm">
+                                <div className="flex items-center gap-2.5 mb-4">
+                                    <span className="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex-shrink-0">
+                                        <WhatsAppIcon size={16} />
+                                    </span>
+                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-800">
+                                        Chat Directly on WhatsApp
+                                    </span>
+                                </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <a
+                                        href="https://wa.me/260966626579"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm hover:shadow transition-all group"
+                                    >
+                                        <WhatsAppIcon size={16} className="text-white group-hover:scale-110 transition-transform flex-shrink-0" />
+                                        <span>+260 966 626579</span>
+                                    </a>
+                                    <a
+                                        href="https://wa.me/260771814040"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs shadow-sm hover:shadow transition-all group"
+                                    >
+                                        <WhatsAppIcon size={16} className="text-white group-hover:scale-110 transition-transform flex-shrink-0" />
+                                        <span>+260 771 814040</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </Reveal>
+
+                        <div className="relative flex py-2 items-center mb-6">
+                            <div className="flex-grow border-t border-gray-200"></div>
+                            <span className="flex-shrink mx-4 text-xs font-medium text-gray-400 uppercase tracking-wider">
+                                Or Send A Message
+                            </span>
+                            <div className="flex-grow border-t border-gray-200"></div>
                         </div>
 
                         <form className="space-y-4">
@@ -216,7 +293,7 @@ export default function Contact() {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full bg-primary text-white font-bold py-3 rounded-xl hover:bg-blue-900 transition-colors shadow-lg shadow-primary/25 text-sm"
+                                        className="w-full bg-primary text-white font-bold py-3 rounded-full hover:bg-blue-900 transition-colors shadow-lg shadow-primary/25 text-sm"
                                     >
                                         Send Message
                                     </button>

@@ -29,6 +29,7 @@ function LazyServiceVideo({ videoSrc, poster }: { videoSrc: string; poster: stri
     useEffect(() => {
         if (shouldLoad && videoRef.current) {
             videoRef.current.src = videoSrc;
+            videoRef.current.play().catch(() => {});
         }
     }, [shouldLoad, videoSrc]);
 
@@ -42,7 +43,7 @@ function LazyServiceVideo({ videoSrc, poster }: { videoSrc: string; poster: stri
                 autoPlay
                 playsInline
                 poster={poster}
-                preload="none"
+                preload="metadata"
             />
         </div>
     );
@@ -53,74 +54,74 @@ const services = [
         icon: Truck,
         title: "Plant & Equipment Hire",
         description: "Reliable heavy machinery rental including ADT dump trucks, dozers, excavators, and water bowsers for large-scale operations.",
-        image: "/PHOTO%202/WhatsApp%20Image%202026-01-29%20at%209.46.55%20AM%20(1).jpeg",
+        image: "/services/plant-equipment-hire.jpg",
     },
     {
         icon: Truck,
         title: "Logistics & Transportation",
         description: "Specialized transport solutions including abnormal load haulage and cross-border logistics for heavy industrial goods.",
-        image: "Transportation_and_Logistics_picture.jpg_ukgzag",
+        image: "/services/logistics-transportation.jpg",
     },
     {
         icon: Home,
         title: "Prefab & Pre-Engineered Buildings",
         description: "Supply and erection of prefab housing and pre-engineered buildings, offering rapid and durable construction solutions.",
         video: "/construction-video-1.mp4",
-        image: "/PHOTO%202/WhatsApp%20Image%202026-01-29%20at%209.50.20%20AM.jpeg",
+        image: "/services/prefab-poster.jpg",
     },
     {
         icon: Hammer,
         title: "Mining Support Services",
         description: "Comprehensive mining infrastructure support, including heavy equipment supply and tailored civil works.",
-        image: "Mining_Support_.jpg_kb0dql",
+        image: "/services/mining-support.jpg",
     },
     {
         icon: Building2,
         title: "Building Construction",
         description: "We construct residential, commercial, and industrial buildings using durable materials and modern engineering standards.",
-        image: "Building_Construction.jpg_addw5o",
+        image: "/services/building-construction.jpg",
     },
     {
         icon: Warehouse,
         title: "Portal-Framed Structures Fabrication & Erection",
         description: "Design, fabrication, and erection of steel structures suitable for warehouses, factories, and industrial facilities.",
-        image: "Portal_framed_structures.jpg_xhobxw",
+        image: "/services/portal-framed-structures.jpg",
     },
     {
         icon: BrickWall,
         title: "Concrete Works",
         description: "Execution of reinforced concrete foundations, slabs, beams, columns, and structural elements.",
-        image: "Concrete_Works.jpg_jorgaa",
+        image: "/services/concrete-works.jpg",
     },
     {
         icon: Truck,
         title: "All-Weather Roads Construction",
         description: "Construction of durable gravel and paved access roads suitable for farms, industries, and rural infrastructure.",
-        image: "All_weather_road_construction.jpg_quklgz",
+        image: "/services/all-weather-roads.jpg",
     },
     {
         icon: Zap,
         title: "Off-Grid Power Construction",
         description: "Development of off-grid power systems and related infrastructure for remote sites and industrial operations.",
-        image: "Off-Grid_Power_Construction.jpg_xpt8ep",
+        image: "/services/off-grid-power.jpg",
     },
     {
         icon: Factory,
         title: "Substations Construction",
         description: "Civil and mechanical works for electrical substations, including foundations, plinths, cable trenches, and support structures.",
-        image: "Substation-construction.jpg_nylhcd",
+        image: "/services/substations-construction.jpg",
     },
     {
         icon: Fuel,
         title: "Filling Stations Mechanical Works",
         description: "Installation and maintenance of fuel station mechanical systems including tanks, piping, and dispensing lines.",
-        image: "Filling_Stations_Mechanical_Works.jpg_aulk4u",
+        image: "/services/filling-stations.jpg",
     },
     {
         icon: Sun,
         title: "Solar Works",
         description: "Installation of solar power systems, including solar panels, inverters, battery storage, and support structures.",
-        image: "solar_works.jpg_lb3pwz",
+        image: "/services/solar-works.jpg",
     },
 ];
 

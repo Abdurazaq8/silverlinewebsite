@@ -107,8 +107,8 @@ const jsonLd = {
     "closes": "17:00"
   },
   "sameAs": [
-    "https://www.facebook.com/silverlineengineering",
-    "https://www.linkedin.com/company/silverline-engineering"
+    "https://www.facebook.com/share/1KntzJukRd/?mibextid=wwXIfr",
+    "https://www.instagram.com/silverline.eng_limited?stkn=aGtib2tuc2hvNW5w"
   ]
 };
 

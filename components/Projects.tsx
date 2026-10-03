@@ -25,8 +25,11 @@ export default function Projects() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.slice(0, 3).map((project, index) => (
                             <Reveal key={project.id} delay={index * 0.1} width="100%">
-                                <div className="group overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow bg-white border border-gray-100 flex flex-col h-full">
-                                    <div className="relative h-40 w-full overflow-hidden shrink-0">
+                                <Link
+                                    href={`/projects?project=${project.slug}`}
+                                    className="group overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 bg-white border border-gray-100 flex flex-col h-full cursor-pointer"
+                                >
+                                    <div className="relative h-48 w-full overflow-hidden shrink-0">
                                         <CloudImage
                                             src={project.image}
                                             alt={project.title}
@@ -37,15 +40,15 @@ export default function Projects() {
                                             className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                                             format="auto"
                                         />
-                                        <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                        <div className="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow">
                                             {project.category}
                                         </div>
                                     </div>
-                                    <div className="p-4 flex flex-col flex-grow">
+                                    <div className="p-5 flex flex-col flex-grow">
                                         <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">{project.title}</h3>
                                         <p className="text-gray-600 text-sm leading-relaxed flex-grow">{project.description}</p>
                                     </div>
-                                </div>
+                                </Link>
                             </Reveal>
                         ))}
                     </div>

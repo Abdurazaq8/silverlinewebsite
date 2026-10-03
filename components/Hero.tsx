@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
@@ -15,33 +16,37 @@ const lineVariants = {
 };
 
 export default function Hero() {
-    const heroPoster = getHeroPosterUrl() || "/office_complex_lusaka.png";
-    const heroVideo = getHeroVideoUrl();
+    const heroPoster = getHeroPosterUrl() || "/construction_hero_modern_site.png";
+    const heroVideo = "/whatsapp-hero-video.mp4";
+    const [videoError, setVideoError] = useState(false);
 
     return (
         <section id="hero" className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center pt-32">
-            {/* Video Background */}
-            <div className="absolute inset-0 w-full h-full z-0">
-                <div className="absolute inset-0 bg-black/60 z-10"></div>
-                {heroVideo ? (
+            {/* Background Image / Video */}
+            <div className="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                <div className="absolute inset-0 bg-black/60 z-10 pointer-events-none"></div>
+
+                {/* Base hero image - always displayed so background is never empty */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={heroPoster}
+                    alt="Silverline Engineering Construction Site"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+
+                {heroVideo && !videoError && (
                     <video
                         autoPlay
                         muted
                         loop
                         playsInline
-                        preload="metadata"
+                        preload="auto"
                         poster={heroPoster}
-                        className="w-full h-full object-cover"
+                        onError={() => setVideoError(true)}
+                        className="absolute inset-0 w-full h-full object-cover"
                     >
                         <source src={heroVideo} type="video/mp4" />
                     </video>
-                ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                        src={heroPoster}
-                        alt=""
-                        className="w-full h-full object-cover"
-                    />
                 )}
             </div>
 
@@ -129,11 +134,11 @@ export default function Hero() {
                             <Link href="/#testimonials" className="cursor-pointer group block">
                                 <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center gap-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                                     <div className="flex -space-x-2">
-                                        {["J", "S", "M"].map((initial, i) => (
+                                        {["H", "K", "G", "P"].map((initial, i) => (
                                             <div
                                                 key={initial}
                                                 className="w-10 h-10 rounded-full border-2 border-white/20 bg-secondary/80 text-white text-sm font-bold flex items-center justify-center"
-                                                style={{ zIndex: 3 - i }}
+                                                style={{ zIndex: 4 - i }}
                                                 aria-hidden
                                             >
                                                 {initial}

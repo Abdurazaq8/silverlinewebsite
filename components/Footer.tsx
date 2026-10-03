@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
+import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Footer() {
     return (
@@ -26,14 +27,36 @@ export default function Footer() {
                             <a href="mailto:info@silverlineng.com" className="text-sm">info@silverlineng.com</a>
                         </div>
                         <div className="flex gap-3 pt-2">
-                            {[Facebook, Instagram, Twitter].map((Icon, idx) => (
-                                <Link
-                                    key={idx}
-                                    href="#"
-                                    className="w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gray-700 hover:text-white transition-all"
+                            {[
+                                {
+                                    Icon: WhatsAppIcon,
+                                    href: "https://wa.me/260966626579",
+                                    label: "WhatsApp",
+                                    hoverColor: "hover:bg-emerald-600",
+                                },
+                                {
+                                    Icon: Facebook,
+                                    href: "https://www.facebook.com/share/1KntzJukRd/?mibextid=wwXIfr",
+                                    label: "Facebook",
+                                    hoverColor: "hover:bg-blue-600",
+                                },
+                                {
+                                    Icon: Instagram,
+                                    href: "https://www.instagram.com/silverline.eng_limited?stkn=aGtib2tuc2hvNW5w",
+                                    label: "Instagram",
+                                    hoverColor: "hover:bg-pink-600",
+                                },
+                            ].map(({ Icon, href, label, hoverColor }) => (
+                                <a
+                                    key={label}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={label}
+                                    className={`w-9 h-9 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 ${hoverColor} hover:text-white transition-all duration-300`}
                                 >
                                     <Icon size={16} />
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     </div>
