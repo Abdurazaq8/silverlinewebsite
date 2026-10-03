@@ -26,7 +26,7 @@ export default function Projects() {
                         {projects.slice(0, 3).map((project, index) => (
                             <Reveal key={project.id} delay={index * 0.1} width="100%">
                                 <Link
-                                    href={`/projects?project=${project.slug}`}
+                                    href={`/projects/${project.slug}`}
                                     className="group overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 bg-white border border-gray-100 flex flex-col h-full cursor-pointer"
                                 >
                                     <div className="relative h-48 w-full overflow-hidden shrink-0">
@@ -57,7 +57,7 @@ export default function Projects() {
                         <div className="text-center mt-6">
                             <Link
                                 href="/projects"
-                                className="inline-block px-8 py-3 border-2 border-primary text-primary font-bold rounded-md hover:bg-primary hover:text-white transition-colors"
+                                className="inline-block px-8 py-3 border-2 border-primary text-primary font-bold rounded-full hover:bg-primary hover:text-white transition-colors shadow-sm"
                             >
                                 View All Projects
                             </Link>
