@@ -242,7 +242,7 @@ export default function ProjectDetailClient({ project }: { project: ProjectItem 
                             </p>
                             <div className="space-y-2.5 pt-2">
                                 <Link
-                                    href="/#contact"
+                                    href="/contact"
                                     className="w-full inline-flex items-center justify-center gap-1.5 px-6 py-3 bg-secondary hover:bg-orange-600 text-white font-bold text-xs rounded-full transition-colors shadow-md"
                                 >
                                     <span>Inquire With Our Team</span>

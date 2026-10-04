@@ -215,7 +215,7 @@ export default function ProjectsClient() {
                     </p>
                     <div className="flex flex-wrap items-center justify-center gap-4">
                         <Link
-                            href="/#contact"
+                            href="/contact"
                             className="px-8 py-3.5 bg-secondary text-white font-bold text-sm rounded-full hover:bg-orange-600 transition-colors shadow-md"
                         >
                             Request Technical Consultation
