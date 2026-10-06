@@ -81,3 +81,56 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
+@keyframes moveGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
+@keyframes moveGridReverse {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -60px 60px;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+.animate-moving-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  animation: moveGrid 10s linear infinite;
+}
+
+.animate-moving-dots {
+  background-image: radial-gradient(rgba(249, 115, 22, 0.22) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  animation: moveGridReverse 14s linear infinite;
+}
+
+.animate-scanline {
+  animation: scanline 2.5s ease-in-out infinite;
+}
