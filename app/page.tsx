@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Capabilities from "@/components/Capabilities";
 import Process from "@/components/Process";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
@@ -18,6 +19,7 @@ export default function Home() {
       <TrustStrip />
 
       <Services />
+      <Capabilities />
       <Process />
       <Projects />
       <About />

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Mail } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Clock } from "lucide-react";
 import WhatsAppIcon from "./WhatsAppIcon";
 
 export default function Footer() {
@@ -20,11 +20,15 @@ export default function Footer() {
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
                             Building dreams with precision and excellence. <br />
-                            Your trusted partner in construction.
+                            Your trusted partner in steel and concrete construction.
                         </p>
                         <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
                             <Mail size={16} />
                             <a href="mailto:info@silverlineng.com" className="text-sm">info@silverlineng.com</a>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-400 text-xs pt-1">
+                            <Clock size={14} className="text-secondary shrink-0" />
+                            <span>MON – FRI: 8:00 AM – 5:00 PM | SAT: 8:00 AM – 1:00 PM</span>
                         </div>
                         <div className="flex gap-3 pt-2">
                             {[
@@ -46,6 +50,12 @@ export default function Footer() {
                                     label: "Instagram",
                                     hoverColor: "hover:bg-pink-600",
                                 },
+                                {
+                                    Icon: Linkedin,
+                                    href: "https://www.linkedin.com/company/silverline-engineering-limited",
+                                    label: "LinkedIn",
+                                    hoverColor: "hover:bg-blue-700",
+                                },
                             ].map(({ Icon, href, label, hoverColor }) => (
                                 <a
                                     key={label}
@@ -65,9 +75,15 @@ export default function Footer() {
                     <div className="md:col-span-2 space-y-4">
                         <h4 className="text-base font-medium">Company</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            {['Privacy policy', 'Terms of service', 'Refund policy', 'Contact us'].map((item) => (
-                                <li key={item}>
-                                    <Link href={item === 'Contact us' ? '/contact' : '#'} className="hover:text-white transition-colors">{item}</Link>
+                            {[
+                                { name: 'About us', href: '/#about' },
+                                { name: 'Services', href: '/#services' },
+                                { name: 'Capabilities', href: '/#capabilities' },
+                                { name: 'Our Work', href: '/projects' },
+                                { name: 'Contact us', href: '/contact' },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-white transition-colors">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -75,11 +91,16 @@ export default function Footer() {
 
                     {/* Links Section - Helpful resources */}
                     <div className="md:col-span-2 space-y-4">
-                        <h4 className="text-base font-medium">Helpful resources</h4>
+                        <h4 className="text-base font-medium">Capabilities</h4>
                         <ul className="space-y-3 text-gray-400 text-sm">
-                            {['Features', 'How to use', 'Pricing', 'FAQ'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="hover:text-white transition-colors">{item}</Link>
+                            {[
+                                { name: 'Fabrication Facility', href: '/#capabilities' },
+                                { name: 'Engineering Team', href: '/#capabilities' },
+                                { name: 'Quality Control', href: '/#capabilities' },
+                                { name: 'Compliance & Safety', href: '/#capabilities' },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="hover:text-white transition-colors">{item.name}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -89,7 +110,7 @@ export default function Footer() {
                     <div className="md:col-span-4 space-y-4">
                         <h4 className="text-base font-medium">News & Updates</h4>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Enter your email address for receiving valuable newsletters.
+                            Enter your email address for receiving valuable engineering newsletters.
                         </p>
                         <div className="relative">
                             <input
@@ -106,7 +127,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="pt-6 text-center text-gray-500 text-xs">
-                    <p>© 2025 Silverline Engineering Limited. All rights reserved.</p>
+                    <p>© 2026 Silverline Engineering Ltd. All rights reserved.</p>
                 </div>
             </div>
         </footer>
