@@ -21,10 +21,6 @@ import {
     Pause,
     Volume2,
     VolumeX,
-    Cpu,
-    Check,
-    Compass,
-    Sparkles,
 } from "lucide-react";
 import { Reveal } from "./Reveal";
 import WhatsAppIcon from "./WhatsAppIcon";
@@ -54,307 +50,244 @@ export default function Capabilities() {
         }
     };
 
+    const capabilityMetrics = [
+        {
+            value: "2,500m²",
+            title: "Fabrication Facility",
+            tag: "Heavy Structural",
+            description: "High-capacity steel workshop with overhead cranes in Lusaka",
+            image: "/capabilities/fabrication-facility.jpg",
+            icon: Factory,
+            badgeColor: "bg-blue-500/20 text-blue-300 border-blue-400/30",
+            valueColor: "text-white",
+            accentColor: "bg-blue-400",
+        },
+        {
+            value: "2,000m²",
+            title: "Prefab Production Line",
+            tag: "Modular Units",
+            description: "Dedicated pre-engineered and rapid building production line",
+            image: "/capabilities/metal-fabrication.jpg",
+            icon: Layers,
+            badgeColor: "bg-orange-500/20 text-orange-300 border-orange-400/30",
+            valueColor: "text-amber-400",
+            accentColor: "bg-secondary",
+        },
+        {
+            value: "CNC & Plasma",
+            title: "Automated Precision",
+            tag: "Computerized Cutting",
+            description: "Multi-axis plasma cutting torches and precision plate rolling",
+            image: "/capabilities/cnc-frame-2.jpg",
+            icon: Cog,
+            badgeColor: "bg-indigo-500/20 text-indigo-300 border-indigo-400/30",
+            valueColor: "text-sky-300",
+            accentColor: "bg-sky-400",
+        },
+        {
+            value: "100%",
+            title: "Regulatory Compliance",
+            tag: "Statutory Accredited",
+            description: "Full ZRA, NAPSA, Workers' Compensation & ISO progress",
+            image: "/capabilities/welding-workshop.jpg",
+            icon: ShieldCheck,
+            badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-400/30",
+            valueColor: "text-emerald-400",
+            accentColor: "bg-emerald-500",
+        },
+    ];
+
     const fabricationFeatures = [
-        {
-            title: "2,500m² Fabrication Facility",
-            desc: "Heavy structural steel production floor with high-bay clearance",
-        },
-        {
-            title: "2,000m² Production Line",
-            desc: "Dedicated assembly lines for rapid pre-fabricated modular units",
-        },
-        {
-            title: "CNC Precision Machinery",
-            desc: "Computerized numerical control profiling for millimeter tolerances",
-        },
-        {
-            title: "Plasma Cutting Systems",
-            desc: "High-definition multi-axis steel plate and profile cutting",
-        },
-        {
-            title: "Plate Rolling Machines",
-            desc: "Hydraulic section and heavy plate curvature forming",
-        },
-        {
-            title: "Multiple Welding Stations",
-            desc: "MIG, TIG, and SAW stations staffed by certified structural welders",
-        },
-        {
-            title: "Heavy Overhead Cranes",
-            desc: "Integrated bridge cranes for safe multi-ton structural handling",
-        },
+        "2,500m² fabrication facility",
+        "2,000m² Production Line of Pre-Fabricated units",
+        "CNC machinery for precision fabrication",
+        "Plasma cutting systems",
+        "Rolling machines",
+        "Multiple welding stations",
+        "Overhead cranes for heavy structural handling",
     ];
 
     const teamStructure = [
         {
-            number: "01",
             title: "Experienced Engineering Team",
-            description: "Registered structural and civil engineers guiding design integrity, calculations, and technical compliance.",
+            description: "Registered structural and civil engineers guiding design integrity and technical compliance.",
             icon: Users,
-            tag: "Design & Calc",
         },
         {
-            number: "02",
             title: "Skilled Fabricators & Technicians",
-            description: "Certified welders, machinists, and steel fitters delivering high-tolerance structural assemblies.",
+            description: "Certified welders, machinists, and steel fitters delivering high-tolerance structural components.",
             icon: Wrench,
-            tag: "Manufacturing",
         },
         {
-            number: "03",
             title: "Dedicated Site Supervisors & PMs",
-            description: "Seasoned on-site project directors managing critical paths, timelines, and execution milestones.",
+            description: "On-site leadership managing timelines, subcontractor alignment, and execution milestones.",
             icon: HardHat,
-            tag: "Site Command",
         },
         {
-            number: "04",
             title: "Safety-Focused Operational Teams",
-            description: "Trained HSE officers maintaining zero-harm site protocols, risk mitigation, and compliance.",
+            description: "Trained safety officers ensuring zero-harm site protocols and daily hazard mitigation.",
             icon: ShieldCheck,
-            tag: "Zero-Harm",
         },
     ];
 
     const qcSystems = [
-        {
-            step: "01",
-            title: "Detailed Project Planning & Scheduling",
-            desc: "Critical-path scheduling, engineering milestones, and resource optimization.",
-        },
-        {
-            step: "02",
-            title: "Material Inspection & Verification",
-            desc: "Mill test certifications, tensile grade validation, and metallurgical testing.",
-        },
-        {
-            step: "03",
-            title: "Fabrication Quality Checks",
-            desc: "Dimensional tolerance verification, laser alignment, and ultrasonic weld testing.",
-        },
-        {
-            step: "04",
-            title: "Structural Installation Supervision",
-            desc: "On-site rigging oversight, calibrated bolt torque checks, and plumb verification.",
-        },
-        {
-            step: "05",
-            title: "Safety Compliance & Site Management",
-            desc: "Daily toolbox briefings, hazardous task permits, and strict zero-harm audit regimes.",
-        },
+        "Detailed project planning and scheduling",
+        "Material inspection and verification",
+        "Fabrication quality checks",
+        "Structural installation supervision",
+        "Safety compliance and site management",
     ];
 
     const certifications = [
         {
             name: "Zambia Revenue Authority (ZRA)",
-            status: "Full Statutory Tax Clearance Verified",
+            status: "Tax Clearance Certified",
             badge: "Active & Compliant",
-            verified: true,
         },
         {
             name: "National Pension Scheme Authority (NAPSA)",
-            status: "Formal Workforce Social Security Coverage",
+            status: "Statutory Workforce Compliance",
             badge: "Certified",
-            verified: true,
         },
         {
             name: "Workers’ Compensation Fund Control Board",
-            status: "Comprehensive Statutory Occupational Protection",
+            status: "Full Statutory Occupational Coverage",
             badge: "Compliant",
-            verified: true,
         },
         {
             name: "ISO Quality Management Standards",
-            status: "Standard Operating Procedure Audits Active",
+            status: "ISO Certification Process",
             badge: "In Progress",
-            verified: false,
         },
     ];
 
     return (
-        <section
-            id="capabilities"
-            className="py-24 lg:py-32 bg-[#FCFDFF] relative overflow-hidden border-t border-slate-100"
-        >
-            {/* Subtle Architectural Blueprint Background Accents */}
-            <div className="absolute inset-0 pointer-events-none opacity-[0.03] [background-image:linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] [background-size:4rem_4rem]" />
-            <div className="absolute top-1/4 -right-40 w-96 h-96 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-1/3 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <section id="capabilities" className="py-24 bg-gradient-to-b from-white via-gray-50/50 to-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+                <div className="text-center max-w-3xl mx-auto mb-16">
                     <Reveal width="100%">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 text-white text-[11px] font-bold uppercase tracking-[0.2em] mb-5 shadow-sm">
-                            <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
-                            <Factory size={13} className="text-secondary" />
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-4 border border-primary/10">
+                            <Factory size={14} className="text-secondary" />
                             Our Capabilities
                         </div>
                     </Reveal>
 
                     <Reveal width="100%" delay={0.1}>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15] mb-6 font-[var(--font-outfit)]">
+                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary tracking-tight leading-tight mb-5">
                             Engineering Capability Built for{" "}
-                            <span className="relative inline-block text-primary">
-                                Complex Projects
-                                <svg className="absolute -bottom-1.5 left-0 w-full h-2 text-secondary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                    <path d="M0 5 Q 50 10, 100 5" stroke="currentColor" strokeWidth="3" fill="none" />
-                                </svg>
-                            </span>
+                            <span className="text-secondary">Complex Projects</span>
                         </h2>
                     </Reveal>
 
                     <Reveal width="100%" delay={0.2}>
-                        <p className="text-gray-600 text-base md:text-lg leading-relaxed font-normal">
+                        <p className="text-gray-600 text-base md:text-lg leading-relaxed">
                             <strong className="text-gray-900 font-semibold">High-Capacity Engineering & Construction Expertise:</strong>{" "}
                             Silverline Engineering Ltd operates with a strong focus on engineering discipline, operational efficiency, and execution certainty. Our integrated capabilities allow us to deliver projects ranging from steel fabrication and structural installation to turnkey industrial developments.
                         </p>
                     </Reveal>
                 </div>
 
-                {/* Quick Capability Metrics Strip */}
-                <Reveal width="100%" delay={0.25}>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-20 lg:mb-28">
-                        
-                        <div className="group relative bg-white rounded-3xl p-6 lg:p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-                            <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-primary via-primary/80 to-transparent rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Main Facility</span>
-                                <span className="p-2 rounded-xl bg-primary/5 text-primary group-hover:scale-110 transition-transform">
-                                    <Factory size={16} />
-                                </span>
-                            </div>
-                            <span className="text-3xl lg:text-4xl font-extrabold text-primary font-[var(--font-outfit)] tracking-tight block">
-                                2,500m²
-                            </span>
-                            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide mt-1.5 block">
-                                Heavy Fabrication Facility
-                            </span>
-                        </div>
+                {/* Quick Capability Metrics Strip - Google UI Interactive Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-24">
+                    {capabilityMetrics.map((metric, idx) => (
+                        <Reveal key={idx} width="100%" delay={0.15 + idx * 0.08}>
+                            <div className="group relative h-72 sm:h-80 rounded-3xl overflow-hidden border border-gray-200/90 shadow-sm hover:shadow-2xl hover:shadow-primary/25 transition-all duration-500 hover:-translate-y-2 cursor-pointer flex flex-col justify-between p-6 bg-slate-950">
+                                
+                                {/* Background Image with Smooth Zoom on Hover */}
+                                <Image
+                                    src={metric.image}
+                                    alt={metric.title}
+                                    fill
+                                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110 filter brightness-[0.70] group-hover:brightness-[0.80]"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                />
 
-                        <div className="group relative bg-white rounded-3xl p-6 lg:p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-                            <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-secondary via-orange-400 to-transparent rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Modular Assembly</span>
-                                <span className="p-2 rounded-xl bg-secondary/10 text-secondary group-hover:scale-110 transition-transform">
-                                    <Layers size={16} />
-                                </span>
-                            </div>
-                            <span className="text-3xl lg:text-4xl font-extrabold text-secondary font-[var(--font-outfit)] tracking-tight block">
-                                2,000m²
-                            </span>
-                            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide mt-1.5 block">
-                                Prefab Production Line
-                            </span>
-                        </div>
+                                {/* Multi-Layer Gradient Overlays for High Contrast & Sleek Google UI Aesthetic */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/30 transition-opacity duration-500 group-hover:from-slate-950/90 group-hover:via-slate-950/50" />
+                                
+                                {/* Subtle Glass Highlight Ring on Hover */}
+                                <div className="absolute inset-0 rounded-3xl border border-white/10 group-hover:border-white/30 transition-colors duration-500 pointer-events-none" />
 
-                        <div className="group relative bg-white rounded-3xl p-6 lg:p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-                            <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-transparent rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Machining Tolerance</span>
-                                <span className="p-2 rounded-xl bg-blue-50 text-blue-600 group-hover:scale-110 transition-transform">
-                                    <Cpu size={16} />
-                                </span>
-                            </div>
-                            <span className="text-3xl lg:text-4xl font-extrabold text-gray-900 font-[var(--font-outfit)] tracking-tight block">
-                                CNC & Plasma
-                            </span>
-                            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide mt-1.5 block">
-                                Automated Precision
-                            </span>
-                        </div>
+                                {/* Card Header (Pill Badge + Arrow) */}
+                                <div className="relative z-10 flex items-center justify-between gap-2">
+                                    <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase border backdrop-blur-md shadow-sm ${metric.badgeColor}`}>
+                                        <metric.icon size={13} className="shrink-0" />
+                                        <span>{metric.tag}</span>
+                                    </span>
+                                    <div className="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white/70 group-hover:text-white group-hover:bg-white/20 transition-all duration-300">
+                                        <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                    </div>
+                                </div>
 
-                        <div className="group relative bg-white rounded-3xl p-6 lg:p-7 border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
-                            <div className="absolute top-0 left-8 right-8 h-1 bg-gradient-to-r from-emerald-600 via-teal-400 to-transparent rounded-full opacity-80 group-hover:opacity-100 transition-opacity" />
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Statutory Clearances</span>
-                                <span className="p-2 rounded-xl bg-emerald-50 text-emerald-600 group-hover:scale-110 transition-transform">
-                                    <ShieldCheck size={16} />
-                                </span>
-                            </div>
-                            <span className="text-3xl lg:text-4xl font-extrabold text-emerald-600 font-[var(--font-outfit)] tracking-tight block">
-                                100%
-                            </span>
-                            <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide mt-1.5 block">
-                                Regulatory Compliance
-                            </span>
-                        </div>
+                                {/* Card Footer (Value, Title, Description, Animated Accent Line) */}
+                                <div className="relative z-10 space-y-1.5 pt-4">
+                                    <span className={`text-3xl sm:text-4xl font-extrabold tracking-tight font-[var(--font-outfit)] block ${metric.valueColor} drop-shadow-sm`}>
+                                        {metric.value}
+                                    </span>
+                                    <h4 className="text-base font-bold text-white tracking-wide leading-snug">
+                                        {metric.title}
+                                    </h4>
+                                    <p className="text-xs text-gray-300/90 leading-relaxed line-clamp-2">
+                                        {metric.description}
+                                    </p>
+                                    {/* Google UI Interactive Expanding Accent Bar */}
+                                    <div className="pt-2">
+                                        <div className={`h-1 w-10 group-hover:w-20 rounded-full transition-all duration-500 ease-out ${metric.accentColor}`} />
+                                    </div>
+                                </div>
 
-                    </div>
-                </Reveal>
+                            </div>
+                        </Reveal>
+                    ))}
+                </div>
 
                 {/* Capability Pillar 1: Fabrication Facility */}
-                <div className="mb-24 lg:mb-32">
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-                        
-                        {/* Left: Text and Features */}
+                <div className="mb-24">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                        {/* Text and Features */}
                         <div className="lg:col-span-6 space-y-6">
                             <Reveal width="100%">
                                 <div className="space-y-3">
-                                    <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider">
-                                        <Cog size={14} className="animate-[spin_6s_linear_infinite]" />
-                                        Heavy Industrial Infrastructure
-                                    </div>
-                                    <h3 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight font-[var(--font-outfit)]">
+                                    <span className="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-1.5">
+                                        <Cog size={15} /> Heavy Industrial Infrastructure
+                                    </span>
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight">
                                         Fabrication Facility
                                     </h3>
-                                    <p className="text-gray-600 text-base leading-relaxed">
+                                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                                         Our fabrication facility located in Lusaka is designed to support large-scale steel manufacturing and complex structural systems.
                                     </p>
                                 </div>
                             </Reveal>
 
                             <Reveal delay={0.1} width="100%">
-                                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow space-y-5">
-                                    <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                                        <h4 className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-2">
-                                            <Layers size={16} className="text-secondary" />
-                                            Key Infrastructure & Machinery
-                                        </h4>
-                                        <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full">
-                                            Fully Operational
-                                        </span>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 gap-2.5">
+                                <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/90 shadow-sm space-y-4">
+                                    <h4 className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-2">
+                                        <Layers size={16} className="text-secondary" />
+                                        Key Infrastructure & Machinery
+                                    </h4>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                                         {fabricationFeatures.map((feature, i) => (
-                                            <div
-                                                key={i}
-                                                className="group/item flex items-center justify-between p-3 rounded-2xl bg-slate-50/70 hover:bg-slate-100/80 border border-slate-100 hover:border-slate-200 transition-all duration-200"
-                                            >
-                                                <div className="flex items-center gap-3">
-                                                    <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                                                        <Check size={13} strokeWidth={3} />
-                                                    </div>
-                                                    <div>
-                                                        <span className="text-xs font-bold text-gray-900 block group-hover/item:text-primary transition-colors">
-                                                            {feature.title}
-                                                        </span>
-                                                        <span className="text-[11px] text-gray-500 font-normal">
-                                                            {feature.desc}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <span className="text-[10px] font-mono text-slate-400 hidden sm:inline">
-                                                    0{i + 1}
-                                                </span>
+                                            <div key={i} className="flex items-start gap-2.5 text-xs text-gray-700 font-medium">
+                                                <CheckCircle2 size={15} className="text-emerald-600 mt-0.5 shrink-0" />
+                                                <span>{feature}</span>
                                             </div>
                                         ))}
                                     </div>
-
-                                    <p className="text-xs text-gray-500 pt-3 border-t border-slate-100 italic leading-relaxed">
+                                    <p className="text-xs text-gray-500 pt-3 border-t border-gray-100 italic leading-relaxed">
                                         This infrastructure allows Silverline Engineering Ltd to fabricate high-performance structural steel systems for industrial and commercial construction projects.
                                     </p>
                                 </div>
                             </Reveal>
                         </div>
 
-                        {/* Right: Video & Workshop Images Showcase */}
+                        {/* Video & Workshop Images Showcase */}
                         <div className="lg:col-span-6 space-y-4">
                             <Reveal delay={0.2} width="100%">
-                                {/* High-Tech CNC Video Player */}
-                                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-2xl border border-slate-800 bg-slate-950 group">
+                                {/* CNC Video Player */}
+                                <div className="relative rounded-3xl overflow-hidden aspect-video shadow-xl border border-gray-200 bg-gray-900 group">
                                     <video
                                         id="cnc-capability-video"
                                         src="/capabilities/cnc-machine.mp4"
@@ -365,146 +298,92 @@ export default function Capabilities() {
                                         playsInline
                                         className="w-full h-full object-cover"
                                     />
-
-                                    {/* Video Top HUD Overlay */}
-                                    <div className="absolute top-4 left-4 right-4 z-10 flex items-center justify-between pointer-events-none">
-                                        <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/70 backdrop-blur-md text-white text-xs font-semibold border border-white/10 shadow-sm">
-                                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                            <span className="tracking-wide">LUSAKA STEEL WORKS • CNC PLASMA 4.0</span>
-                                        </div>
-                                        <span className="px-2.5 py-1 rounded-full bg-secondary/90 text-white text-[10px] font-bold uppercase tracking-wider backdrop-blur-md hidden sm:inline">
-                                            Live Cut Feed
-                                        </span>
+                                    {/* Video Overlay Badge */}
+                                    <div className="absolute top-4 left-4 z-10 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-semibold">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                        CNC Automated Precision
                                     </div>
 
-                                    {/* Subtle Gradient Shadow Base */}
-                                    <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
-
-                                    {/* Bottom Control Bar */}
-                                    <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2.5">
+                                    {/* Media Controls */}
+                                    <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 opacity-90 group-hover:opacity-100 transition-opacity">
                                         <button
                                             onClick={togglePlay}
                                             aria-label={isVideoPlaying ? "Pause Video" : "Play Video"}
-                                            className="px-3.5 py-1.5 rounded-full bg-black/80 hover:bg-black text-white text-xs font-medium flex items-center gap-1.5 backdrop-blur-md border border-white/15 transition-all active:scale-95 shadow-md"
+                                            className="w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center backdrop-blur-md transition-colors"
                                         >
-                                            {isVideoPlaying ? (
-                                                <>
-                                                    <Pause size={13} />
-                                                    <span>Pause</span>
-                                                </>
-                                            ) : (
-                                                <>
-                                                    <Play size={13} fill="currentColor" />
-                                                    <span>Play</span>
-                                                </>
-                                            )}
+                                            {isVideoPlaying ? <Pause size={15} /> : <Play size={15} />}
                                         </button>
-
                                         <button
                                             onClick={toggleMute}
                                             aria-label={isMuted ? "Unmute Video" : "Mute Video"}
-                                            className="w-8 h-8 rounded-full bg-black/80 hover:bg-black text-white flex items-center justify-center backdrop-blur-md border border-white/15 transition-all active:scale-95 shadow-md"
+                                            className="w-9 h-9 rounded-full bg-black/70 hover:bg-black text-white flex items-center justify-center backdrop-blur-md transition-colors"
                                         >
-                                            {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
+                                            {isMuted ? <VolumeX size={15} /> : <Volume2 size={15} />}
                                         </button>
                                     </div>
                                 </div>
                             </Reveal>
 
-                            {/* Supplementary Workshop Images */}
+                            {/* Supplementary Images */}
                             <Reveal delay={0.3} width="100%">
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 group">
+                                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
                                         <Image
                                             src="/capabilities/fabrication-facility.jpg"
                                             alt="Lusaka Fabrication Facility"
                                             fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
                                             sizes="(max-width: 768px) 50vw, 25vw"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-4">
-                                            <span className="text-[10px] font-bold uppercase tracking-wider text-secondary">
-                                                Facility Heavy Bay
-                                            </span>
-                                            <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
-                                                Overhead Crane Handling
-                                            </span>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                                            <span className="text-[11px] font-semibold text-white tracking-wide">Lusaka Workshop & Cranes</span>
                                         </div>
                                     </div>
 
-                                    <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 group">
+                                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md border border-gray-100 group">
                                         <Image
                                             src="/capabilities/welding-workshop.jpg"
                                             alt="Precision Welding Stations"
                                             fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
                                             sizes="(max-width: 768px) 50vw, 25vw"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-4">
-                                            <span className="text-[10px] font-bold uppercase tracking-wider text-secondary">
-                                                Structural Fitment
-                                            </span>
-                                            <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
-                                                Multiple Welding Bays
-                                            </span>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                                            <span className="text-[11px] font-semibold text-white tracking-wide">Multiple Welding Stations</span>
                                         </div>
                                     </div>
                                 </div>
                             </Reveal>
                         </div>
-
                     </div>
                 </div>
 
                 {/* Capability Pillar 2: Engineering & Workforce */}
-                <div className="mb-24 lg:mb-32">
-                    <div className="bg-gradient-to-br from-slate-950 via-[#0B1B3D] to-slate-950 text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl border border-slate-800">
-                        {/* Ambient Glowing Background Elements */}
-                        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/15 rounded-full blur-[100px] pointer-events-none" />
-                        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none" />
-
+                <div className="mb-24">
+                    <div className="bg-primary text-white rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl">
                         <div className="relative z-10 max-w-3xl mb-12">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-secondary text-xs font-bold uppercase tracking-wider backdrop-blur-md mb-3 border border-white/10">
-                                <Users size={14} /> Technical & Operational Excellence
+                            <span className="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-1.5 mb-2">
+                                <Users size={15} /> Technical & Operational Excellence
                             </span>
-                            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 text-white font-[var(--font-outfit)]">
+                            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight mb-4 text-white">
                                 Engineering & Workforce
                             </h3>
-                            <p className="text-gray-300 text-base leading-relaxed">
+                            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                                 Our technical and operational teams combine engineering expertise with practical construction experience to deliver projects efficiently. Our teams work collaboratively to maintain consistent quality standards across all phases of project execution.
                             </p>
                         </div>
 
                         {/* Team Structure Grid */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10 mb-10">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10 mb-8">
                             {teamStructure.map((member, i) => (
-                                <Reveal key={i} delay={i * 0.08} width="100%">
-                                    <div className="group bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-secondary/50 transition-all duration-300 h-full flex flex-col justify-between hover:-translate-y-1">
-                                        <div className="space-y-4">
-                                            <div className="flex items-center justify-between">
-                                                <div className="w-11 h-11 rounded-2xl bg-secondary/20 text-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-inner">
-                                                    <member.icon size={22} />
-                                                </div>
-                                                <span className="font-mono text-xs font-bold text-white/30 group-hover:text-secondary transition-colors">
-                                                    {member.number}
-                                                </span>
+                                <Reveal key={i} delay={i * 0.1} width="100%">
+                                    <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:bg-white/15 transition-all duration-300 h-full flex flex-col justify-between">
+                                        <div className="space-y-3">
+                                            <div className="w-10 h-10 rounded-full bg-secondary/20 text-secondary flex items-center justify-center">
+                                                <member.icon size={20} />
                                             </div>
-
-                                            <div>
-                                                <h4 className="font-bold text-sm text-white tracking-tight mb-1.5 group-hover:text-secondary transition-colors">
-                                                    {member.title}
-                                                </h4>
-                                                <p className="text-xs text-gray-300/90 leading-relaxed font-normal">
-                                                    {member.description}
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
-                                            <span className="text-[10px] font-semibold tracking-wider uppercase text-gray-400">
-                                                {member.tag}
-                                            </span>
-                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                            <h4 className="font-bold text-sm text-white">{member.title}</h4>
+                                            <p className="text-xs text-gray-300 leading-relaxed">{member.description}</p>
                                         </div>
                                     </div>
                                 </Reveal>
@@ -512,158 +391,107 @@ export default function Capabilities() {
                         </div>
 
                         {/* Visual Photos Row inside Dark Card */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-white/10 relative z-10">
-                            <div className="group relative aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-md">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-white/10 relative z-10">
+                            <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                                 <Image
                                     src="/capabilities/metal-fabrication.jpg"
                                     alt="Industrial Metal Fabrication"
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
-                                    <span className="text-[11px] font-semibold text-white tracking-wide">
-                                        High-Tolerance Structural Welding
-                                    </span>
-                                </div>
                             </div>
-
-                            <div className="group relative aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-md">
+                            <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                                 <Image
                                     src="/capabilities/cnc-frame-2.jpg"
                                     alt="CNC Plasma Cutting"
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
-                                    <span className="text-[11px] font-semibold text-white tracking-wide">
-                                        Automated Plasma Profile Cutting
-                                    </span>
-                                </div>
                             </div>
-
-                            <div className="group relative aspect-video rounded-2xl overflow-hidden border border-white/15 shadow-md">
+                            <div className="relative aspect-video rounded-xl overflow-hidden border border-white/10">
                                 <Image
                                     src="/capabilities/cnc-frame-3.jpg"
                                     alt="High Tolerance Finishing"
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                                    className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 33vw"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-3">
-                                    <span className="text-[11px] font-semibold text-white tracking-wide">
-                                        Assembly & Final QA Fitment
-                                    </span>
-                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 {/* Capability Pillars 3 & 4: Quality Control & Compliance */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20 lg:mb-28">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
                     
                     {/* Quality Control & Safety Card */}
                     <Reveal width="100%">
-                        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-between">
+                        <div className="bg-white rounded-3xl p-8 border border-gray-200/90 shadow-sm h-full flex flex-col justify-between">
                             <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-wider">
-                                        <ShieldCheck size={15} />
-                                        Zero-Harm Assurance
-                                    </div>
-                                    <span className="text-[11px] font-semibold text-slate-400">
-                                        5-Stage QA Pipeline
-                                    </span>
+                                <div className="flex items-center gap-2 mb-3 text-secondary text-xs font-bold uppercase tracking-wider">
+                                    <ShieldCheck size={16} />
+                                    Zero-Harm Assurance
                                 </div>
-
-                                <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight mb-3 font-[var(--font-outfit)]">
+                                <h3 className="text-2xl font-bold text-gray-900 tracking-tight mb-3">
                                     Quality Control & Safety
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-7 font-normal">
+                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                     Silverline Engineering Ltd maintains structured inspection and quality assurance procedures throughout fabrication and construction.
                                 </p>
 
-                                {/* Structured 5-Step Process */}
                                 <div className="space-y-3 mb-6">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-500 block">
+                                        Our Project Management Approach Includes:
+                                    </span>
                                     {qcSystems.map((system, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="group flex items-start gap-3.5 p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/80 border border-slate-100 hover:border-slate-200 transition-all duration-200"
-                                        >
-                                            <span className="w-7 h-7 rounded-full bg-secondary text-white flex items-center justify-center text-xs font-extrabold shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                                                {system.step}
+                                        <div key={idx} className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100 text-xs text-gray-800 font-medium">
+                                            <span className="w-5 h-5 rounded-full bg-secondary text-white flex items-center justify-center text-[10px] font-bold shrink-0">
+                                                {idx + 1}
                                             </span>
-                                            <div>
-                                                <h4 className="text-xs font-bold text-gray-900 leading-snug group-hover:text-primary transition-colors">
-                                                    {system.title}
-                                                </h4>
-                                                <p className="text-[11px] text-gray-500 leading-relaxed mt-0.5 font-normal">
-                                                    {system.desc}
-                                                </p>
-                                            </div>
+                                            <span>{system}</span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-gray-500 italic">
-                                <span>These systems ensure projects are delivered safely and strictly according to engineering specifications.</span>
-                            </div>
+                            <p className="text-xs text-gray-500 pt-4 border-t border-gray-100 leading-relaxed italic">
+                                These systems ensure projects are delivered safely and strictly according to engineering specifications.
+                            </p>
                         </div>
                     </Reveal>
 
                     {/* Compliance & Certification Card */}
                     <Reveal width="100%" delay={0.15}>
-                        <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col justify-between">
+                        <div className="bg-white rounded-3xl p-8 border border-gray-200/90 shadow-sm h-full flex flex-col justify-between">
                             <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider">
-                                        <Award size={15} />
-                                        Accredited Operations
-                                    </div>
-                                    <span className="text-[11px] font-semibold text-slate-400">
-                                        National Standards
-                                    </span>
+                                <div className="flex items-center gap-2 mb-3 text-emerald-600 text-xs font-bold uppercase tracking-wider">
+                                    <Award size={16} />
+                                    Accredited Operations
                                 </div>
-
-                                <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight mb-3 font-[var(--font-outfit)]">
+                                <h3 className="text-2xl font-bold text-gray-900 tracking-tight mb-3">
                                     Compliance & Certification
                                 </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed mb-7 font-normal">
-                                    Silverline Engineering Ltd operates in strict accordance with regulatory, taxation, and statutory industry requirements in Zambia.
+                                <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                                    Silverline Engineering Ltd operates in strict accordance with statutory, regulatory, and national industry requirements in Zambia.
                                 </p>
 
-                                {/* Compliance Certification List */}
-                                <div className="space-y-3.5 mb-7">
+                                <div className="space-y-3.5 mb-6">
                                     {certifications.map((cert, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="group flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-slate-100/80 border border-slate-100 hover:border-slate-200 transition-all duration-200 gap-3"
-                                        >
-                                            <div className="flex items-center gap-3.5">
-                                                <div className="w-9 h-9 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
-                                                    <FileCheck2 size={18} />
-                                                </div>
+                                        <div key={idx} className="flex items-center justify-between p-3.5 rounded-xl bg-gray-50 border border-gray-100 gap-3">
+                                            <div className="flex items-center gap-2.5">
+                                                <FileCheck2 size={16} className="text-primary shrink-0" />
                                                 <div>
-                                                    <h4 className="text-xs font-bold text-gray-900 group-hover:text-primary transition-colors">
-                                                        {cert.name}
-                                                    </h4>
-                                                    <span className="text-[11px] text-gray-500 font-normal block mt-0.5">
-                                                        {cert.status}
-                                                    </span>
+                                                    <span className="text-xs font-bold text-gray-900 block">{cert.name}</span>
+                                                    <span className="text-[11px] text-gray-500">{cert.status}</span>
                                                 </div>
                                             </div>
-
-                                            <span
-                                                className={`px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider shrink-0 shadow-sm ${
-                                                    cert.badge === "In Progress"
-                                                        ? "bg-amber-100/90 text-amber-800 border border-amber-200"
-                                                        : "bg-emerald-100/90 text-emerald-800 border border-emerald-200"
-                                                }`}
-                                            >
+                                            <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shrink-0 ${
+                                                cert.badge === "In Progress"
+                                                    ? "bg-amber-100 text-amber-800"
+                                                    : "bg-emerald-100 text-emerald-800"
+                                            }`}>
                                                 {cert.badge}
                                             </span>
                                         </div>
@@ -671,72 +499,61 @@ export default function Capabilities() {
                                 </div>
                             </div>
 
-                            {/* Tender Verification Notice */}
-                            <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-between gap-3">
-                                <div className="flex items-center gap-2">
-                                    <Sparkles size={15} className="text-secondary shrink-0" />
-                                    <span className="text-xs font-semibold text-primary">Need verified compliance documents for tender submissions?</span>
-                                </div>
+                            <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-between">
+                                <span className="text-xs font-semibold text-primary">Need verified compliance documents for tender?</span>
                                 <Link
                                     href="/contact"
-                                    className="text-xs font-bold text-secondary hover:text-orange-600 flex items-center gap-1 shrink-0 group"
+                                    className="text-xs font-bold text-secondary hover:underline flex items-center gap-1 shrink-0"
                                 >
-                                    <span>Contact Us</span>
-                                    <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                                    Contact Us <ArrowUpRight size={13} />
                                 </Link>
                             </div>
                         </div>
                     </Reveal>
-
                 </div>
 
                 {/* Final Call to Action Strip: Work With a Team Built for Scale */}
                 <Reveal width="100%" delay={0.2}>
-                    <div className="rounded-3xl bg-gradient-to-r from-slate-950 via-[#0B1B3D] to-slate-950 text-white p-8 sm:p-12 lg:p-14 shadow-2xl border border-slate-800 relative overflow-hidden">
-                        {/* Glow accent */}
-                        <div className="absolute top-0 right-1/4 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
-
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+                    <div className="rounded-3xl bg-gradient-to-r from-primary via-slate-900 to-primary text-white p-8 sm:p-12 shadow-xl border border-gray-800">
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                             
-                            <div className="lg:col-span-7 space-y-3.5">
-                                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-secondary text-xs font-bold uppercase tracking-wider border border-secondary/30">
-                                    <Factory size={13} />
+                            <div className="lg:col-span-7 space-y-3">
+                                <span className="text-secondary text-xs font-bold uppercase tracking-widest">
                                     Steel & Concrete Construction
-                                </div>
-                                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight font-[var(--font-outfit)] text-white">
+                                </span>
+                                <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
                                     Work With a Team Built for Scale
                                 </h3>
-                                <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl">
+                                <p className="text-gray-300 text-sm leading-relaxed max-w-xl">
                                     Silverline Engineering Ltd provides the engineering expertise, fabrication capability, and execution discipline required to deliver complex industrial and infrastructure projects.
                                 </p>
                                 
                                 {/* Operating Hours */}
-                                <div className="flex flex-wrap items-center gap-3 pt-2 text-xs text-gray-300">
-                                    <div className="flex items-center gap-2 bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10">
+                                <div className="flex flex-wrap items-center gap-4 pt-2 text-xs text-gray-400">
+                                    <div className="flex items-center gap-1.5">
                                         <Clock size={14} className="text-secondary" />
-                                        <span className="font-medium">MON – FRI: 8:00 AM – 5:00 PM</span>
+                                        <span>MON – FRI: 8:00 AM – 5:00 PM</span>
                                     </div>
-                                    <div className="bg-white/10 px-3.5 py-1.5 rounded-full border border-white/10 font-medium">
-                                        SAT: 8:00 AM – 1:00 PM
-                                    </div>
+                                    <span className="hidden sm:inline text-gray-600">•</span>
+                                    <div>SAT: 8:00 AM – 1:00 PM</div>
                                 </div>
                             </div>
 
                             <div className="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-secondary hover:bg-orange-600 text-white font-bold text-sm rounded-full transition-all shadow-xl shadow-secondary/25 hover:scale-[1.02] active:scale-[0.98]"
+                                    className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-secondary hover:bg-orange-600 text-white font-bold text-sm rounded-full transition-all shadow-lg shadow-secondary/25 hover:scale-[1.02] active:scale-[0.98]"
                                 >
                                     <span>Request a Quote</span>
-                                    <ArrowUpRight size={17} />
+                                    <ArrowUpRight size={16} />
                                 </Link>
 
-                                <div className="grid grid-cols-2 gap-2.5">
+                                <div className="grid grid-cols-2 gap-2">
                                     <a
                                         href="tel:+260966626579"
-                                        className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-full border border-white/15 transition-all active:scale-95 shadow-sm"
+                                        className="inline-flex items-center justify-center gap-1.5 px-4 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-xs rounded-full border border-white/10 transition-colors"
                                     >
-                                        <Phone size={14} className="text-secondary" />
+                                        <Phone size={14} />
                                         <span>0966 626579</span>
                                     </a>
 
@@ -744,9 +561,9 @@ export default function Capabilities() {
                                         href="https://wa.me/260966626579"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center gap-2 px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs rounded-full transition-all shadow-md active:scale-95"
+                                        className="inline-flex items-center justify-center gap-1.5 px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs rounded-full transition-colors shadow-sm"
                                     >
-                                        <WhatsAppIcon size={15} className="text-white" />
+                                        <WhatsAppIcon size={14} className="text-white" />
                                         <span>WhatsApp</span>
                                     </a>
                                 </div>
