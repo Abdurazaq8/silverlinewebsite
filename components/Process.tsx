@@ -81,8 +81,8 @@ export default function Process() {
                                             visible: {
                                                 scaleX: 1,
                                                 transition: {
-                                                    duration: 0.8,
-                                                    delay: (i * 1.6) + 1.0, // Start after Circle finishes (approx 1.0s)
+                                                    duration: 0.35,
+                                                    delay: (i * 0.35) + 0.25,
                                                     ease: "easeInOut"
                                                 }
                                             }
@@ -105,8 +105,8 @@ export default function Process() {
                                         opacity: 1,
                                         scale: 1,
                                         transition: {
-                                            duration: 0.5,
-                                            delay: index * 1.6, // New interval
+                                            duration: 0.3,
+                                            delay: index * 0.35,
                                             ease: "backOut"
                                         }
                                     }
@@ -142,8 +142,8 @@ export default function Process() {
                                             visible: {
                                                 pathLength: 1,
                                                 transition: {
-                                                    duration: 0.8,
-                                                    delay: (index * 1.6) + 0.2, // Starts shortly after icon
+                                                    duration: 0.35,
+                                                    delay: (index * 0.35) + 0.1,
                                                     ease: "easeInOut"
                                                 }
                                             }
@@ -167,7 +167,7 @@ export default function Process() {
                                     visible: {
                                         opacity: 1,
                                         y: 0,
-                                        transition: { duration: 0.5, delay: (index * 1.6) + 0.5 }
+                                        transition: { duration: 0.3, delay: (index * 0.35) + 0.15 }
                                     }
                                 }}
                             >

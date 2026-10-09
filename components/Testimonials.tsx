@@ -52,7 +52,7 @@ export default function Testimonials() {
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.3 }}
                         className="inline-flex items-center px-4 py-1.5 bg-secondary/10 border border-secondary/20 rounded-full text-secondary text-xs sm:text-sm font-semibold mb-4"
                     >
                         <span>Client Testimonials</span>
@@ -62,7 +62,7 @@ export default function Testimonials() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
+                        transition={{ duration: 0.35, delay: 0.05 }}
                         className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight"
                     >
                         What Our Clients Say
@@ -72,7 +72,7 @@ export default function Testimonials() {
                         initial={{ scaleX: 0 }}
                         whileInView={{ scaleX: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.35, delay: 0.1 }}
                         className="w-24 h-1.5 bg-gradient-to-r from-secondary to-orange-500 mx-auto rounded-full mb-6"
                     />
 
@@ -80,7 +80,7 @@ export default function Testimonials() {
                         initial={{ opacity: 0, y: 15 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.25 }}
+                        transition={{ duration: 0.35, delay: 0.15 }}
                         className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed"
                     >
                         Real feedback from project owners, global organizations, and commercial leaders across Zambia who trust our engineering quality.
@@ -92,10 +92,10 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={testimonial.name}
-                            initial={{ opacity: 0, y: 35 }}
+                            initial={{ opacity: 0, y: 25 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-40px" }}
-                            transition={{ duration: 0.6, delay: index * 0.12, ease: "easeOut" }}
+                            transition={{ duration: 0.35, delay: index * 0.07, ease: "easeOut" }}
                             whileHover={{ y: -8, scale: 1.015 }}
                             className="group relative bg-white rounded-3xl p-8 sm:p-10 border border-gray-200/80 shadow-md hover:shadow-2xl hover:shadow-secondary/15 transition-all duration-500 overflow-hidden flex flex-col justify-between"
                         >

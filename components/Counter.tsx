@@ -9,7 +9,7 @@ interface CounterProps {
     duration?: number;
 }
 
-export default function Counter({ value, suffix = "", duration = 3.5 }: CounterProps) {
+export default function Counter({ value, suffix = "", duration = 1.2 }: CounterProps) {
     const ref = useRef<HTMLSpanElement>(null);
     const motionValue = useMotionValue(0);
     const springValue = useSpring(motionValue, {

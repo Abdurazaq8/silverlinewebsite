@@ -7,11 +7,11 @@ import { ArrowRight, Star } from "lucide-react";
 import { getHeroPosterUrl, getHeroVideoUrl } from "@/lib/cloudinary";
 
 const lineVariants = {
-    hidden: { y: 100, opacity: 0 },
+    hidden: { y: 35, opacity: 0 },
     visible: (i: number) => ({
         y: 0,
         opacity: 1,
-        transition: { duration: 1, delay: i * 0.15, ease: "easeOut" as const },
+        transition: { duration: 0.45, delay: i * 0.08, ease: "easeOut" as const },
     }),
 };
 
@@ -97,7 +97,7 @@ export default function Hero() {
                             className="text-lg md:text-xl text-gray-200 max-w-xl leading-relaxed"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+                            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                         >
                             Zambian owned Construction Company specializing in Civil, Electrical, Mechanical, and Solar Engineering services.
                         </motion.p>
@@ -109,7 +109,7 @@ export default function Hero() {
                             className="flex flex-col w-full gap-4"
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+                            transition={{ duration: 0.35, delay: 0.28, ease: "easeOut" }}
                         >
                             <Link
                                 href="#contact"
@@ -129,7 +129,7 @@ export default function Hero() {
                         <motion.div
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
+                            transition={{ duration: 0.35, delay: 0.36, ease: "easeOut" }}
                         >
                             <Link href="/#testimonials" className="cursor-pointer group block">
                                 <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl flex items-center gap-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">

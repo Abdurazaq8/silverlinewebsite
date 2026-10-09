@@ -112,7 +112,7 @@ export default function ProjectsClient() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {filteredProjects.map((project, index) => (
-                            <Reveal key={project.id} width="100%" delay={index * 0.06} className="h-full">
+                            <Reveal key={project.id} width="100%" delay={(index % 3) * 0.04} className="h-full">
                                 <Link
                                     href={`/projects/${project.slug}`}
                                     className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-gray-200/80"

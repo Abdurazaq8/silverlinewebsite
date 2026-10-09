@@ -220,7 +220,7 @@ export default function Contact() {
 
                         <form className="space-y-4">
                             {/* Name Fields */}
-                            <Reveal delay={0.2} width="100%">
+                            <Reveal delay={0.05} width="100%">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="space-y-1">
                                         <input
@@ -240,7 +240,7 @@ export default function Contact() {
                             </Reveal>
 
                             {/* Contact Details */}
-                            <Reveal delay={0.3} width="100%">
+                            <Reveal delay={0.1} width="100%">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="space-y-1">
                                         <input
@@ -260,7 +260,7 @@ export default function Contact() {
                             </Reveal>
 
                             {/* Inquiry Type */}
-                            <Reveal delay={0.4} width="100%">
+                            <Reveal delay={0.15} width="100%">
                                 <div className="space-y-2">
                                     <p className="text-sm font-medium text-gray-700">Type of Inquiry</p>
                                     <div className="flex flex-wrap gap-2">
@@ -282,7 +282,7 @@ export default function Contact() {
                             </Reveal>
 
                             {/* Message & Submit */}
-                            <Reveal delay={0.5} width="100%">
+                            <Reveal delay={0.2} width="100%">
                                 <div className="space-y-4">
                                     <div className="space-y-1">
                                         <textarea

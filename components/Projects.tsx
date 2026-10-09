@@ -24,7 +24,7 @@ export default function Projects() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {projects.slice(0, 3).map((project, index) => (
-                            <Reveal key={project.id} delay={index * 0.1} width="100%">
+                            <Reveal key={project.id} delay={index * 0.05} width="100%">
                                 <Link
                                     href={`/projects/${project.slug}`}
                                     className="group overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 bg-white border border-gray-100 flex flex-col h-full cursor-pointer"

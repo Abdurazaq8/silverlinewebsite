@@ -147,7 +147,7 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <Reveal key={index} delay={index * 0.1} width="100%">
+                        <Reveal key={index} delay={(index % 4) * 0.05} width="100%">
                             <div className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group h-full overflow-hidden flex flex-col">
                                 {(service.image || service.video) && (
                                     <div className="relative h-48 w-full overflow-hidden bg-gray-100">

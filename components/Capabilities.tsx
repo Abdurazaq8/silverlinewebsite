@@ -193,7 +193,7 @@ export default function Capabilities() {
                 {/* 4 Cards Grid - Exact Same Component Style as Projects & Services */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                     {capabilityCards.map((card, index) => (
-                        <Reveal key={index} delay={index * 0.1} width="100%">
+                        <Reveal key={index} delay={index * 0.05} width="100%">
                             <div className="group overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1.5 bg-white border border-gray-100 flex flex-col h-full cursor-pointer">
                                 
                                 {/* Image Container with Hover Zoom & Badge */}
@@ -355,7 +355,7 @@ export default function Capabilities() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {teamStructure.map((team, idx) => (
-                            <Reveal key={idx} delay={idx * 0.1} width="100%">
+                            <Reveal key={idx} delay={idx * 0.05} width="100%">
                                 <div className="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl hover:shadow-md transition-shadow h-full border border-gray-100">
                                     <div className="p-4 bg-white rounded-full shadow-sm mb-4 text-secondary">
                                         <team.icon size={28} />
