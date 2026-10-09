@@ -1,10 +1,10 @@
 import { Award, Users, Briefcase, Clock, ShieldCheck, HardHat, FileCheck, AlertTriangle } from "lucide-react";
 
 const stats = [
-    { icon: Clock, label: "Years Experience", value: "4+" },
+    { icon: Clock, label: "Years Experience", value: "5+" },
     { icon: Briefcase, label: "Projects Completed", value: "15+" },
+    { icon: Award, label: "Fabrication Facility", value: "5,000m²" },
     { icon: Users, label: "Qualified Workers", value: "50+" },
-    { icon: Award, label: "Awards Won", value: "3+" },
 ];
 
 const safetyPoints = [

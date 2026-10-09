@@ -8,11 +8,11 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
-    { name: "Home", href: "/" },
     { name: "Services", href: "/#services" },
+    { name: "Projects", href: "/#projects" },
     { name: "Capabilities", href: "/#capabilities" },
-    { name: "Projects", href: "/projects" },
-    { name: "About", href: "/#about" },
+    { name: "How We Work", href: "/#process" },
+    { name: "About Us", href: "/#about" },
     { name: "Contact", href: "/contact" },
 ];
 

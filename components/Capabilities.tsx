@@ -53,10 +53,10 @@ export default function Capabilities() {
     // 4 Primary Capability Cards matching Projects & Services component styling
     const capabilityCards = [
         {
-            value: "2,500m²",
+            value: "5,000m²",
             title: "Fabrication Facility",
             badge: "Heavy Structural",
-            description: "High-capacity Lusaka facility equipped with overhead cranes and automated tooling for large-scale steel manufacturing.",
+            description: "High-capacity 5,000m² Lusaka facility equipped with overhead cranes and automated tooling for large-scale steel manufacturing.",
             image: "/capabilities/fabrication-facility.jpg",
             icon: Factory,
         },
@@ -80,14 +80,14 @@ export default function Capabilities() {
             value: "100%",
             title: "Regulatory Compliance",
             badge: "Certified Standards",
-            description: "Full statutory compliance including ZRA Tax Clearance, NAPSA, Workers' Compensation Fund, and ISO certification in progress.",
+            description: "100% Statutory compliance (NCC Grade 1, ZRA, NAPSA, ISO 14001 • 45001 • 9001).",
             image: "/capabilities/welding-workshop.jpg",
             icon: ShieldCheck,
         },
     ];
 
     const fabricationFeatures = [
-        "2,500m² fabrication facility",
+        "5,000m² heavy steel fabrication facility",
         "2,000m² Production Line of Pre-Fabricated units",
         "CNC machinery for precision fabrication",
         "Plasma cutting systems",
@@ -129,6 +129,36 @@ export default function Capabilities() {
 
     const certifications = [
         {
+            name: "ISO 9001 : 2015",
+            status: "Quality Management System (QMS)",
+            badge: "Certified",
+        },
+        {
+            name: "ISO 14001 : 2015",
+            status: "Environmental Management System (EMS)",
+            badge: "Certified",
+        },
+        {
+            name: "ISO 45001 : 2018",
+            status: "Occupational Health & Safety (OH&S)",
+            badge: "Certified",
+        },
+        {
+            name: "National Council for Construction (NCC)",
+            status: "Grade 1 Heavy Civil & Building Works",
+            badge: "NCC Grade 1",
+        },
+        {
+            name: "Workers’ Compensation Fund Control Board",
+            status: "Full Statutory Occupational Coverage",
+            badge: "WCFCB Compliant",
+        },
+        {
+            name: "Engineering Institution of Zambia (EIZ)",
+            status: "Chartered Structural & Civil Engineering Practice",
+            badge: "EIZ Practice",
+        },
+        {
             name: "Zambia Revenue Authority (ZRA)",
             status: "Tax Clearance Certified",
             badge: "Compliant",
@@ -137,16 +167,6 @@ export default function Capabilities() {
             name: "National Pension Scheme Authority (NAPSA)",
             status: "Statutory Workforce Compliance",
             badge: "Certified",
-        },
-        {
-            name: "Workers’ Compensation Fund Control Board",
-            status: "Full Statutory Occupational Coverage",
-            badge: "Compliant",
-        },
-        {
-            name: "ISO Quality Management Standards",
-            status: "ISO Certification Process",
-            badge: "In Progress",
         },
     ];
 
@@ -224,10 +244,10 @@ export default function Capabilities() {
                                         Manufacturing Infrastructure
                                     </span>
                                     <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">
-                                        Fabrication Facility
+                                        5,000m² Lusaka Fabrication Plant
                                     </h3>
                                     <p className="text-gray-600 text-base leading-relaxed">
-                                        Our fabrication facility located in Lusaka is designed to support large-scale steel manufacturing and complex structural systems.
+                                        Our high-capacity 5,000m² facility located in Lusaka is designed to support large-scale steel manufacturing and complex structural systems.
                                     </p>
                                 </div>
 

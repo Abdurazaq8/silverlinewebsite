@@ -43,12 +43,12 @@
 
 | Metric | Figure / Capability |
 | :--- | :--- |
-| **Industry Track Record** | **4+ Years** of hands-on operational excellence across Zambia |
+| **Industry Track Record** | **5+ Years** of hands-on operational excellence across Zambia |
 | **Completed Portfolio** | **15+ Projects** completed (10 featured enterprise case studies + ongoing landmarks) |
 | **Direct Skilled Workforce** | **50+ Qualified Personnel** (registered engineers, certified welders, machine operators) |
 | **Industry Awards** | **3+ Recognition Awards** for technical construction excellence |
 | **Client Satisfaction Rate** | **100%** customer handover and operational success rate |
-| **Heavy Fabrication Workshop** | **2,500 m²** enclosed structural manufacturing facility in Lusaka |
+| **Heavy Fabrication Workshop** | **5,000 m²** enclosed structural manufacturing facility in Lusaka |
 | **Prefabrication Production Line**| **2,000 m²** dedicated production line for modular pre-fabricated units |
 | **Service Categories** | **8 Principal Divisions** / **12 Specialized Service Lines** |
 
@@ -58,7 +58,7 @@
 
 Silverline Engineering operates integrated fabrication and manufacturing infrastructure in Lusaka engineered for high-tonnage structural output:
 
-### Heavy Fabrication Workshop (2,500 m²)
+### Heavy Fabrication Workshop (5,000 m²)
 * Designed to support high-tonnage structural steel manufacturing, column fabrication, portal frames, trusses, and industrial plate work.
 * Equipped with **overhead travelling cranes** for heavy structural handling, assembly, and truck loading.
 * Enclosed fabrication bays with multi-point three-phase power reticulation.
@@ -201,12 +201,12 @@ flowchart LR
 5. **Safety Compliance and Site Management**: Zero workplace incidents policy, daily job safety analyses (JSA), and regulatory sign-offs.
 
 ### Regulatory Accreditations & Statutory Compliance
-* **National Council for Construction (NCC)**: Accredited civil and structural contractor in Zambia.
-* **Engineering Institution of Zambia (EIZ)**: Corporate and professional engineering registration.
-* **Workers’ Compensation Fund Control Board (WCFCB)**: Full statutory occupational coverage and safety compliance.
+* **National Council for Construction (NCC)**: Accredited NCC Grade 1 civil and structural contractor in Zambia.
+* **Engineering Institution of Zambia (EIZ)**: Corporate and professional engineering registration (EIZ Practice).
+* **Workers’ Compensation Fund Control Board (WCFCB)**: Full statutory occupational coverage and safety compliance (WCFCB Compliant).
 * **Zambia Revenue Authority (ZRA)**: Fully registered with active, compliant Tax Clearance Certification.
 * **National Pension Scheme Authority (NAPSA)**: 100% compliant statutory pension contributions for all workforce tiers.
-* **ISO Quality Management Systems**: Quality management system certification currently in progress.
+* **ISO Integrated Management Systems**: Certified to ISO 9001 (Quality), ISO 14001 (Environment), and ISO 45001 (Occupational Health & Safety).
 
 ---
 

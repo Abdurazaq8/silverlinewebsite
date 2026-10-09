@@ -8,19 +8,24 @@ export default function TrustStrip() {
     const certifications = [
         {
             name: "National Council for Construction",
-            acronym: "NCC",
+            acronym: "NCC Grade 1",
             logo: "/logos/ncc.png",
         },
         {
             name: "Workers' Compensation Fund Control Board",
-            acronym: "WCFCB",
+            acronym: "WCFCB Compliant",
             logo: "/logos/wcfcb.png",
         },
         {
             name: "Engineering Institution of Zambia",
-            acronym: "EIZ",
+            acronym: "EIZ Practice",
             logo: "/logos/eiz.png",
-        }
+        },
+        {
+            name: "ISO 9001 (Quality) • ISO 14001 (Environment) • ISO 45001 (OH&S)",
+            acronym: "ISO 14001 • 45001 • 9001",
+            logo: "/logos/iso.svg",
+        },
     ];
 
     const clients = [
@@ -44,7 +49,7 @@ export default function TrustStrip() {
                         {/* Certifications Section - Static */}
                         <div className="flex-shrink-0 w-full lg:w-auto text-center lg:text-left">
                             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">
-                                Accredited By
+                                Accredited &amp; ISO Certified
                             </h3>
                             <div className="flex flex-wrap justify-center lg:justify-start gap-6 items-center">
                                 {certifications.map((cert, index) => (
